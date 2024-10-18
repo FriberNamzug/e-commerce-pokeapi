@@ -12,7 +12,7 @@ Route::post('/registro', [AuthController::class, 'registro']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
 
-Route::get('/products/precios', [ProductController::class, 'obtenerPrecioProductos']);
+Route::post('/products/precios', [ProductController::class, 'obtenerPrecioProductos']);
 
 
 Route::post('/cart', [CartController::class, 'agregarAlCarrito'])->middleware('auth:sanctum');
